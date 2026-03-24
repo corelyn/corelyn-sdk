@@ -13,15 +13,16 @@ class CorelynSDK:
     ):
         """
         Initialize the SDK.
-
-        Args:
-            api_key (str): Corelyn API key
-            default_model (str): Default model
-            system_prompt (str): Default system prompt
         """
         self.api_key = api_key
         self.default_model = default_model
         self.system_prompt = system_prompt
+
+    def set_model(self, model: str):
+        """
+        Change the default model globally.
+        """
+        self.default_model = model
 
     def get_ai_response(
         self,
@@ -32,12 +33,6 @@ class CorelynSDK:
     ):
         """
         Synchronous AI call.
-
-        Args:
-            user_prompt (str): User message
-            system_prompt (str): Optional system override
-            messages (list): Full custom messages array
-            model (str): Optional model override
         """
 
         try:
