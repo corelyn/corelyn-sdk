@@ -13,7 +13,10 @@ pip install corelyn-sdk
 ```python
 from corelyn_sdk import CorelynSDK
 
-sdk = CorelynSDK(api_key="YOUR_API_KEY")
-response = sdk.get_ai_response("Make me a site about bananas in one html file", model="nvidia/meta/llama-3.2-1b-instruct")
-print(response)
+sdk = CorelynSDK(
+    api_key="your-api-key",
+    system_prompt="You are a helpful assistant"
+)
+
+print(sdk.get_ai_response("Explain AI"))
 ```
