@@ -16,7 +16,8 @@ from corelyn_sdk import CorelynSDK
 
 sdk = CorelynSDK(
     api_key="your-api-key",
-    system_prompt="You are a helpful assistant"
+    system_prompt="You are a helpful assistant",
+    default_model="cerebras/llama3.1-8b"
 )
 
 print(sdk.get_ai_response("Explain AI"))
@@ -50,4 +51,9 @@ messages = [
 sdk = CorelynSDK("your-api-key")
 
 print(sdk.get_ai_response(messages=messages))
+```
+
+# Set diffrent model
+```python
+sdk.set_model("nvidia/moonshotai/kimi-k2.5")
 ```
