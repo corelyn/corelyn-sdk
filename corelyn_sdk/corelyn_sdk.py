@@ -3,7 +3,7 @@ import httpx
 
 
 class CorelynSDK:
-    BASE_URL = "https://corelyncloud-backend.onrender.com/chat/completions"
+    BASE_URL = "https://api.corelyn.ro/chat/completions"
 
     def __init__(
         self,
